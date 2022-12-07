@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-family: "Arial" sans-serif;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.search_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+
+.search_input {
+    padding: 6px 12px;
+    height: 38px;
+    border: 1px solid #262626;
+    border-radius: 4px;
+}
+
+.search_input:focus {
+    outline: none;
+    border-color: aquamarine;
+}
+
+.search_btn {
+    padding: 6px 24px;
+    height: 38px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #262626;
+    cursor: pointer;
+}
+
+.search_btn:hover {
+    background-color: #393939;
+}
+
+.film-link * {
+    color: #262626;
+}
+
+.film-link:hover > .film {
+    border-color: aquamarine;
+}
+
+.film {
+    display: flex;
+    grid-gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 16px;
+    padding: 16px;
+    border: 1px solid rgba(0, 0, 0, .16);
+    border-radius: 2px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.film-name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.heart {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox[checked=true] + .heart path {
+    fill: #e5de00;
+}
+
+.add-link {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 28px;
+    color: #fff;
+    text-decoration: none;
+    background-color: lightgreen;
+    transition: .5s ease-in-out;
+}
+
+.add-link:hover {
+    background-color: palegreen;
+}
+
+.favourites-link {
+    position: fixed;
+    right: 25px;
+    bottom: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 28px;
+    color: #fff;
+    text-decoration: none;
+    background-color: lightgreen;
+    transition: .5s ease-in-out;
+}
+
+.favourites-link svg {
+    width: 22px;
+    height: 22px;
+}

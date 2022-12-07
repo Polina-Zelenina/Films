@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    font-family: "Arial" sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 60px 120px;
+}
+
+.sub-title {
+    font-weight: 700;
+}
