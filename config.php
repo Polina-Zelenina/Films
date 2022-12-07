@@ -9,5 +9,7 @@
 
 	$dbh = new PDO('mysql:host=localhost;dbname=films', 'root', '', [PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING]);
 
-	session_start();
+    if (!defined('NO_SESSION')) {
+        session_start();
+    }
 ?>

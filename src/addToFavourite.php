@@ -3,12 +3,11 @@
 	
 	$json = file_get_contents('php://input');
 	$data = json_decode($json, true);
-	var_dump($data);
-	var_dump($_POST);
-	if (!empty($data['id']) && !empty($data['userId']) && !empty($data['isChecked'])) {
+
+	if (!empty($data['id']) && !empty($data['userId']) && isset($data['isChecked'])) {
 		$filmId = $data['id'];
 		$userId = $data['userId'];
-		$isCheched = $data['isChecked'];
+		$isChecked = $data['isChecked'];
 
 		if ($isChecked) {
 			$stmt = $dbh->prepare("
@@ -19,8 +18,8 @@
 			$stmt->execute(['user_id' => $userId, 'film_id' => $filmId]);
 			$dbh->commit();
 
-			if (dbh->lastInsertId()) {
-				http_response_code(201);
+			if ($dbh->lastInsertId()) {
+				http_response_code(200);
 			}
 		} else {
 			$stmt = $dbh->prepare("

@@ -77,9 +77,7 @@
                 });
 
                 if (response.ok) {
-                    console.log('mem');
                     const thisCheckbox = document.getElementById(id);
-
                     thisCheckbox.checked = !isChecked;
                 }
             }
